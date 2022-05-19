@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <templates>
+        <t t-name="Product_details">
+        <div class="my_item">
+            <section>
+                <div class='row mt-4 dr-product-card'>
+                    <t t-foreach="data" t-as="product">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="product-card card text-center bg-white mx-auto my-3 shadow">
+                                <div class="product-img">
+                                    <img t-attf-src="/web/image/product.template/#{product.id}/image_1024" class="my-5"></img>
+                                </div>
+                                <div class="card-body text-center product-content px-auto py-3">
+                                    <h5 class="card-title product-name font-weight-bold mt-2"><t t-esc="product.name"/></h5>
+                                    <p class="card-text text-center product-description px-4 pt-4">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="product-overview font-weight-bold">
+                                        <a href="#" class="btn btn-alpha-soft rounded-circle"><t t-esc="product.price"/><i class="pl-3 fa fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </section>
+        </div>
+        </t>
+    </templates>

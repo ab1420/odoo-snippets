@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="dr_snipp_social" name="social">
+    <section class="s_references bg-gray-lighter">
+    <div class="container">
+        <div class='row'>
+            <div class='col'>
+                <div class="h1 text-center d-block">
+                    <div class="alert alert-info mt16" role="alert">
+                    <strong>Welcome</strong> in our website!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col'>
+                <div class='d-block text-center'>
+                    <a href="#"><i class="fa fa-whatsapp fa-2x fa-fw"></i></a>
+                    <a href="#"><i class="fa fa-facebook-official fa-2x fa-fw"></i></a>
+                    <a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a>
+                    <a href="#"><i class="fa fa-google fa-2x fa-fw"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</template>
+<template id="dr_social" inherit_id="website.snippets" name="social media">
+    <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+        <t t-snippet="dr_snipp.dr_snipp_social" t-thumbnail="dr_snipp/static/image/social.pngs">
+            <keywords>social</keywords>
+        </t>
+    </xpath>
+</template>
+</odoo>

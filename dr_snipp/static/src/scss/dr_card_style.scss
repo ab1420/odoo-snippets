@@ -1,0 +1,48 @@
+.dr-card {
+    @media screen and (max-width: 600px) {
+        margin-top: 0px;
+    }
+
+    border-radius: 10%;
+
+    .badge-chart {
+        background-color: rgba(165, 168, 11, 0.1);
+        color: orange
+    }
+
+    .badge-bullseye {
+        background-color: rgba(165, 11, 207, 0.1);
+        color: rgb(225, 0, 255)
+    }
+
+    .badge-desktop {
+        background-color: rgba(23, 12, 184, 0.1);
+        color: blue
+    }
+
+    .badge-bullhorn {
+        background-color: rgba(29, 168, 11, 0.1);
+        color: rgb(28, 202, 36)
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: whitesmoke;
+    }
+}
+
+.dr-card:hover {
+    background-color: rgba(75, 83, 83, 0.74);
+    transition: width 2s;
+    transform: scale(1.1);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+}
+
+
+
+@include media-breakpoint-up(md) {
+    .people {
+        .dr-margin:nth-child(even) {
+            margin-top: 100px !important;
+        }
+    }
+}

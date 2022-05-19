@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="dr_snipp_card" name="Card">
+    <section class="s_references">
+    <div class="container">
+        <div class="row people">
+            <div class="col-12 col-md-6 col-lg-3 dr-margin my-3">
+                <div class="card dr-card">
+                    <div class="card-body my-2 text-center">
+                        <div class="badge-chart badge badge-alpha-soft rounded-circle p-5 my-4">
+                            <i class="fa fa-line-chart fa-3x"></i>
+                        </div>
+                        <h5 class="card-title my-2">Grow Business</h5>
+                        <p class="card-text small text-center py-4">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 dr-margin my-3">
+                <div class="card dr-card">
+                    <div class="card-body my-2 text-center">
+                        <div class="badge-bullseye badge badge-alpha-soft rounded-circle p-5 my-4">
+                            <i class="fa fa-bullseye fa-3x"></i>
+                        </div>
+                        <h5 class="card-title my-2">Brand Strategy</h5>
+                        <p class="card-text small text-center py-4">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 dr-margin my-3">
+                <div class="card dr-card">
+                    <div class="card-body my-2 text-center">
+                        <div class="badge-desktop badge badge-alpha-soft rounded-circle p-5 my-4">
+                            <i class="fa fa-desktop fa-3x"></i>
+                        </div>
+                        <h5 class="card-title my-2">Outdoor Advertising</h5>
+                        <p class="card-text small text-center py-4">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 dr-margin my-3">
+                <div class="card dr-card">
+                    <div class="card-body my-2 text-center">
+                        <div class="badge-bullhorn badge badge-alpha-soft rounded-circle p-5 my-4">
+                            <i class="fa fa-bullhorn fa-3x"></i>
+                        </div>
+                        <h5 class="card-title my-2">Repucation Management</h5>
+                        <p class="card-text small text-center py-4">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    </template>
+
+
+    <!-- ===========================Inherit add snipeets======================= -->
+
+    <template id="dr_card" inherit_id="website.snippets" name="Cards">
+    <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+        <t t-snippet="dr_snipp.dr_snipp_card" t-thumbnail="">
+            <keywords>Card</keywords>
+        </t>
+    </xpath>
+</template>
+
+    <!-- ===============================Card CSS && JQUERY============================== -->
+
+<record id="dr_snipp.dr_card_style_scss" model="ir.asset">
+    <field name="name">Snippets scss</field>
+    <field name="bundle">website.assets_frontend</field>
+    <field name="path">dr_snipp/static/src/scss/dr_card_style.scss</field>
+</record>
+
+<record id="dr_snipp.dr_card_style_jquery" model="ir.asset">
+    <field name="name">Snippets jquery</field>
+    <field name="bundle">website.assets_frontend</field>
+    <field name="path">dr_snipp/static/js/dr_card_jquery.js</field>
+</record>
+
+</odoo>

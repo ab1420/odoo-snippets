@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="dr_snipp_effect" name="effect">
+    <section class="s_references bg-gray-lighter">
+    <div class='row'>
+        <div class='col'>
+            <div class="card dr_card row justify-content-center mx-auto my-4">
+                <div class="card-body">
+                    <h3 class="card-header">Droggol</h3>
+                    <p class="card-text"> When we were choosing the name of the company we want something regional and ancient. So we choose a word from the language Sanskrit. दृग्गोल (dṛggola) means a small circle on the axis of the earth, within the greater circle of the armillary sphere, Simply you can say axis of the earth.</p>
+                    <div class="text-center">
+                    <button type="button" class="btn btn-primary" >Visit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</template>
+
+<record id="dr_snipp.dr_style_scss" model="ir.asset">
+    <field name="name">Snippets scss</field>
+    <field name="bundle">website.assets_frontend</field>
+    <field name="path">dr_snipp/static/src/scss/dr_style.scss</field>
+</record>
+
+<template id="dr_effect" inherit_id="website.snippets" name="social media">
+    <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+        <t t-snippet="dr_snipp.dr_snipp_effect" t-thumbnail="">
+            <keywords>Effect</keywords>
+        </t>
+    </xpath>
+</template>
+
+<template id="s-snippet-effect" name="card effect" inherit_id="website.snippet_options">
+    <xpath expr="." position="inside">
+        <div data-selector=".dr_card">
+            <we-select string="Font Style">
+                <we-button data-select-class="">Default</we-button>
+                <we-button data-select-class="dr_bold">Bold</we-button>
+                <we-button data-select-class="dr_light">Light</we-button>
+                <we-button data-select-class="dr_italic">italic</we-button>
+            </we-select>
+        </div>
+         <div data-selector=".dr_card">
+            <we-select string="Card Color">
+                <we-button data-select-class="">Default</we-button>
+                <we-button data-select-class="dr_primary">Blue</we-button>
+                <we-button data-select-class="dr_dark">Dark</we-button>
+                <we-button data-select-class="dr_yellow">yellow</we-button>
+            </we-select>
+        </div>
+    </xpath>
+</template>
+
+
+</odoo>

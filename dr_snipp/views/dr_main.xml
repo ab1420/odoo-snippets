@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_page" name="Product Details">
+    <t t-call="website.layout">
+    <div class="oe_structure">
+        <div class="container dr_product">
+            <br />
+            <center><h3 class="product font-weight-bold">Product Details</h3></center>
+            <br />
+            <div class="search input-group flex-nowrap">
+                <div class="input-group-prepend dropdown show">
+                    <span class="input-group-text btn" id="addon-wrapping"><i class="fa fa-search"></i> Search</span>
+                </div>
+                <input id="input_one" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping"/>
+
+                <!-- ==================================sort================================ -->
+                <a class="btn input-group-text large dropdown-toggle" href="#" role="button" id="sort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-sort-amount-desc"></i>  Sort
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" data-order="name asc" href="#">A To Z</a>
+                    <a class="dropdown-item" data-order="name desc" href="#">Z to A</a>
+                    <a class="dropdown-item" data-order="list_price asc" href="#">Price -- Low to High</a>
+                    <a class="dropdown-item" data-order="list_price desc" href="#">Price -- High to Low</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</t>
+</template>
+
+</odoo>

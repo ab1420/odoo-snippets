@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="dr_snipp_login" name="Login">
+    <section class="s_references bg-gray-lighter">
+    <div class="container">
+        <div class='row'>
+            <div class='col-md-6'>
+                <img src="dr_snipp/static/image/login-2.jpg" class="mx-auto d-block w-100"></img>
+            </div>
+            <div class='col-md-6 contents'>
+                <div class="row justify-content-center">
+                    <div class='col-md-8 my-5 py-5'>
+                        <div class='mb-4'>
+                            <h1>Log In</h1>
+                        </div>
+                        <form>
+                            <div class='form-group first'>
+                                <label for="username">Username</label>
+                                <input type='text' class='form-control rounded-pill'></input>
+                            </div>
+                            <div class='form-group last mb-4'>
+                                <label for="password">Password</label>
+                                <input type='password' class='form-control rounded-pill'></input>
+                            </div>
+                            <div class='d-flex align-item-center'>
+                                <a href='#' class='forgot-pass'>Forgot Password</a>
+                            </div>
+                            <input type='submit' class='btn btn-primary btn-block my-4'></input>
+                            <span class='d-block text-center my-3'>-Or login with-</span>
+                            <div class='text-center'>
+                                <a href="#" class="fa fa-facebook fa-2x fa-fw"></a>
+                                <a href="#" class="fa fa-google fa-2x fa-fw"></a>
+                                <a href="#" class="fa fa-twitter fa-2x fa-fw"></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</template>
+<template id="dr_login" inherit_id="website.snippets" name="login">
+    <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+        <t t-snippet="dr_snipp.dr_snipp_login" t-thumbnail="">
+            <keywords>Login</keywords>
+        </t>
+    </xpath>
+</template>
+
+</odoo>
